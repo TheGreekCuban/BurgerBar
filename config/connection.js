@@ -7,6 +7,7 @@ if (process.env.JAWSDB_URL) {
 } else {
   let connection = mysql.createConnection({
     host: "localhost",
+    port: process.env.PORT,
     user: "root",
     password: process.env.PASSWORD,
     database: "parties_db"
@@ -22,3 +23,8 @@ connection.connect(function (err) {
 });
 
 module.exports = connection;
+
+
+//ASK FOR EXPLAINATION ON HOW THE DB ARE WORKING.
+//ARE THERE TWO SEPARATE ONES NOW? 
+//HOW DO THEY GET UPDATED?
