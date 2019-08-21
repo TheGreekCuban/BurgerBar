@@ -1,38 +1,53 @@
-<h1>Cats!</h1>
+<div class="row">
+  <div class="mx-auto col-sm-9">
+    <h1 class="title">Your Favorite Burgers List!</h1>
+    <p class="mx-auto sub-text">Enter the name of any burger to add it to the list, then you can click <strong>Eat it
+        now!</strong> to move that burger to the consumed list.</p>
+    <p class="mx-auto sub-text">Remember! You can always <strong>remove</strong> any burger you'd like.</p>
+  </div>
+</div>
 
-<h2>Cats that are not sleepy!</h2>
+<div class="row">
+  <div class="col-sm">
+    <div class="holds-input">
+      <h2 class="input-item subtitle">Add a Burger to the list</h2>
+      <form class="create-form input-item">
 
-<ul>
-  {{#each cats}}
-    {{#unless sleepy}}
-      {{> cats/cat-block sleep=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+        <div class="form-group">
+          <label for="ca">Type the name of the burger:</label>
+          <input type="text" id="ca" name="burger_name">
+        </div>
 
-<h2>Cats that are sleepy!</h2>
+        <button class="submit-button" type="submit">Add Burger</button>
+      </form>
+    </div>
+  </div>
+</div>
 
-<ul>
-  {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
-    {{/if}}
-  {{/each}}
-</ul>
+<div class="row holds-all-burgers">
 
-<h2>Add a Cat</h2>
-<form class="create-form">
 
-  <div class="form-group">
-    <label for="ca">Cat Name:</label>
-    <input type="text" id="ca" name="name">
+  <div class=" col-sm-5 holds-half">
+    <h2 class="subtitle">Burgers Just Waiting To Be Devoured!</h2>
+    <div>
+      {{#each burgers}}
+      {{#unless devoured}}
+      {{> bfolder/burger-block devoured=true}}
+      {{/unless}}
+      {{/each}}
+    </div>
   </div>
 
-  <div class="form-group">
-    <label for="slee">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
+  <div class=" col-sm-5 holds-half">
+    <h2 class="subtitle">The Burger Graveyard!</h2>
+    <div>
+      {{#each burgers}}
+      {{#if devoured}}
+      {{> bfolder/burger-block devoured=false}}
+      {{/if}}
+      {{/each}}
+    </div>
   </div>
 
-  <button type="submit">Add Cat</button>
-</form>
+
+</div>
