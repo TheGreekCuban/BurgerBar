@@ -24,6 +24,10 @@ function objToSql(ob) {
     return arr.toString();
 }
 
+//Thi is the orm object where will create three methods to render, insert and update the sql db.
+
+//The functions will call a aquery then the query result will be put into a call back. The call back will carry the data from the query to the model. EX: Once the model runs burger.selectAll() it will run select all in the orm and return that callback with the data which is then called on the model, finally returning the data for the controller. 
+
 const orm = {
     selectAll: function (tableName, callback) {
         let queryString = `SELECT * FROM ${tableName};`
