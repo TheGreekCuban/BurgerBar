@@ -32,7 +32,7 @@
     <div>
       {{#each burgers}}
       {{#unless devoured}}
-      {{> bfolder/burger-block devoured=true}}
+      {{> blocks/burger-block devoured=true}}
       {{/unless}}
       {{/each}}
     </div>
@@ -43,7 +43,7 @@
     <div>
       {{#each burgers}}
       {{#if devoured}}
-      {{> bfolder/burger-block devoured=false}}
+      {{> blocks/burger-block devoured=false}}
       {{/if}}
       {{/each}}
     </div>
