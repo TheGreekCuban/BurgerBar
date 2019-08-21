@@ -49,7 +49,6 @@ const orm = {
 
             callback(result)
         })
-
     }
 }
 
