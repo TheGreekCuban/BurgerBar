@@ -16,7 +16,8 @@ router.get("/", function (request, response) {
 })
 
 router.post("/api/burgers", (request, response) => {
-    burger.insertOne("burger_name", [req.body.burger_name], result => {
+    console.log(`request.body: ${request.body.burger_name}`)
+    burger.insertOne(["burger_name", "devoured"], [request.body.burger_name, request.body.devoured], result => {
         console.log(`api/burgers result: ${result}`)
         //Send back the id of the new burger
         response.json({
@@ -26,13 +27,23 @@ router.post("/api/burgers", (request, response) => {
 })
 
 router.put("/api/burgers/:id", (request, response) => {
-    let condition = `id = ${req.params.id}`
-    console.log(`condidition: ${condition}`)
+    let condition = request.params.id
     burger.updateOne({
         devoured: request.body.devoured
     }, condition, result => {
         if (result.changedRows === 0) {
             //if no results were changed then there must not be a matching ID, so return a 404
+            return response.status(404).end()
+        }
+        response.status(200).end()
+    })
+})
+
+router.delete("/api/burgers/:id", (request, response) => {
+    let condition = request.params.id
+
+    burger.deleteOne(condition, result => {
+        if(result.changedRows === 0) {
             return response.status(404).end()
         }
         response.status(200).end()
