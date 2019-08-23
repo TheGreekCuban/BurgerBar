@@ -40,10 +40,10 @@ router.put("/api/burgers/:id", (request, response) => {
 })
 
 router.delete("/api/burgers/:id", (request, response) => {
-    let condition = request.params.id
+    let condition = "id = " + request.params.id
 
     burger.deleteOne(condition, result => {
-        if(result.changedRows === 0) {
+        if(result.affectedRows === 0) {
             return response.status(404).end()
         }
         response.status(200).end()

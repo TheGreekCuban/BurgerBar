@@ -49,8 +49,6 @@ const orm = {
     },
     insertOne: function (tableName, columns, value, callback) {
         let queryString = "INSERT INTO " + tableName + " (" + columns + ") " + "VALUES " + " (" + printQuestionMarks(value.length) + ")"
-        
-        console.log(`insert query string: ${queryString}`)
         connection.query(queryString, value, (error, result) => {
             if (error) throw error
 
@@ -59,8 +57,8 @@ const orm = {
     },
     updateOne: function (tableName, columnValues, condition, callback) {
         console.log("object to sql: ", objToSql(columnValues))
+        
         let queryString = "UPDATE " + tableName + " SET " + objToSql(columnValues) + " WHERE id = " + condition
-
         connection.query(queryString, (error, result) => {
             if (error) throw error
 
@@ -68,7 +66,8 @@ const orm = {
         })
     },
     deleteOne: function(tableName, condition, callback) {
-        let queryString = "DELETE FROM " + tableName + "WHERE id=" + condition
+        let queryString = "DELETE FROM " + tableName + " WHERE " + condition
+        console.log(`DELETE query string: ${queryString}`)
         connection.query(queryString, (error, result) => {
             if(error) throw error
 
