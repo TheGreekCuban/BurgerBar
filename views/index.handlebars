@@ -5,18 +5,18 @@
         now!</strong> to move that burger to the consumed list. Remember! You can always <strong>remove</strong> any
       burger you'd like.</p>
   </div>
-  <div class="row">
-    <form class="form-container input-item">
-      <div class="form-group form-inline">
-        <label for="ca">Type The Name Of The Burger You'd Like To Add: </label>
-        <input type="text" id="ca" name="burger_name">
-      </div>
-      <button class="submit-button" type="submit">Add Burger</button>
-    </form>
-  </div>
 
-  <div class="row container-inner">
-    <div class="container-inner-inner">
+    <form class="form-inline">
+      <div class="form-group mb-2">
+        <label for="ca" class="sr-only text-center">Type The Name Of The Burger You'd Like To Add</label>
+        <input type="text" class="form-control-plaintext" id="ca" name="burger_name">
+      </div>
+      <button type="submit" class="btn btn-primary mb-2">Add Burger</button>
+    </form>
+
+
+  <div class="inner-container">
+    <div class="left-container-inner">
       <h2 class="inner-inner-title">Burgers Just Waiting To Be Devoured!</h2>
       <div>
         {{#each burgers}}
@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <div class="container-inner-inner">
+    <div class="right-container-inner">
       <h2 class="inner-inner-title">The Burger Graveyard!</h2>
       <div>
         {{#each burgers}}
@@ -37,6 +37,5 @@
         {{/each}}
       </div>
     </div>
-
-
   </div>
+</div>

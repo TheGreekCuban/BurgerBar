@@ -1,13 +1,11 @@
-
-
- body {
+body {
     background-image: url("../img/download.jpg");
     background-size: cover;
     font-family: "Lucida Console", Monaco, monospace;
-    
-  }
-  
-  .container {
+
+}
+
+.container {
     background-color: #FFF44E;
     opacity: 0.65;
     border: #f80000 solid 3px;
@@ -16,88 +14,108 @@
     padding: 1rem;
     padding-bottom: 2rem;
     font-family: "Lucida Console", Monaco, monospace;
-  }
-  
-  li {
+}
+
+li {
     padding: 5px;
     margin: 5px;
     background: rgb(37, 233, 37);
     list-style-type: none;
-    width: 70%;
-    align-items: center;
+    width: 90%;
+    justify-content: center;
     color: #ffffff;
-  }
+}
 
-  .container-inner-inner {
+.left-container-inner,
+.right-container-inner {
     padding: 1rem;
+    margin: 3rem;
     background-color: white;
     border: red solid 3px;
     border-radius: 35px;
-  }
-  
-  .title {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.title {
     font-size: 50px;
     text-align: center;
-    font-weight:500;
+    font-weight: 500;
     margin-top: 2rem;
     margin-bottom: 1rem;
-  }
-  
-  .sub-text {
+}
+
+.sub-text {
     font-family: "Lucida Console", Monaco, monospace;
     text-align: center;
     margin: auto;
     width: 70%;
-  }
-  
-  .inner-inner-title {
+}
+
+.inner-inner-title {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: green;
     font-family: "Lucida Console", Monaco, monospace;
-    font-weight:400;
-  }
-  
-  .form-container {
+    font-weight: 400;
+    width: 100%
+}
+
+.form-inline {
     margin: 1rem;
-    padding: 1rem;
+    padding: 2rem;
     background-color: white;
     border: red solid 3px;
     border-radius: 35px;
-  }
-  
-  label {
+    width: 30%;
+    margin: auto;
+    text-align: center;
+}
+
+label {
     font-family: "Lucida Console", Monaco, monospace;
-  }
-  
-  .burgers {
+}
+
+.burgers {
     opacity: 1;
     border: green solid 3px;
     border-radius: 15px;
-  }
-  
-  .burger-buttons {
+}
+
+.burger-buttons {
     flex-direction: column;
-  }
-  
-  
-  .delete {
+}
+
+
+.delete {
     background-color: red;
     margin-top: 0.5rem;
-  }
-  
-  .devoured-button:hover {
-  }
-  
-  .submit-button:hover {
-  }
-  
-  .burger-name {
-  }
-  
-  #footer-text {
-      font-size: 12px;
-      text-align: center;
-      font-family: "Lucida Console", Monaco, monospace;
-      color: green;
-  }
+}
+
+.devoured-button,
+.delete {
+    width: 40%;
+    justify-content: space-around; 
+}
+
+#ca,
+.btn {
+    width: 80%;
+    margin: 1%;
+    padding: 5px;
+}
+
+#footer-text {
+    font-size: 12px;
+    text-align: center;
+    font-family: "Lucida Console", Monaco, monospace;
+    color: green;
+}
