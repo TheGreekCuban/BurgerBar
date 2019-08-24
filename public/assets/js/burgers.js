@@ -1,6 +1,6 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function () {
-    $(".change-devoured").on("click", function (event) {
+    $(".devoured-button").on("click", function (event) {
         var id = $(this).data("id");
         console.log(`this: ${this}`)
 
@@ -23,7 +23,7 @@ $(function () {
         );
     });
 
-    $(".create-form").on("submit", function (event) {
+    $(".form-container").on("submit", function (event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
 
@@ -46,7 +46,7 @@ $(function () {
         );
     });
 
-    $(".delete-burger").on("click", function (event) {
+    $(".delete").on("click", function (event) {
         var id = $(this).data("id");
 
         // Send the DELETE request.

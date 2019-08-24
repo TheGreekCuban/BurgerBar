@@ -1,0 +1,103 @@
+
+
+ body {
+    background-image: url("../img/download.jpg");
+    background-size: cover;
+    font-family: "Lucida Console", Monaco, monospace;
+    
+  }
+  
+  .container {
+    background-color: #FFF44E;
+    opacity: 0.65;
+    border: #f80000 solid 3px;
+    border-radius: 35px;
+    margin: 2rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    font-family: "Lucida Console", Monaco, monospace;
+  }
+  
+  li {
+    padding: 5px;
+    margin: 5px;
+    background: rgb(37, 233, 37);
+    list-style-type: none;
+    width: 70%;
+    align-items: center;
+    color: #ffffff;
+  }
+
+  .container-inner-inner {
+    padding: 1rem;
+    background-color: white;
+    border: red solid 3px;
+    border-radius: 35px;
+  }
+  
+  .title {
+    font-size: 50px;
+    text-align: center;
+    font-weight:500;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .sub-text {
+    font-family: "Lucida Console", Monaco, monospace;
+    text-align: center;
+    margin: auto;
+    width: 70%;
+  }
+  
+  .inner-inner-title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: green;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-weight:400;
+  }
+  
+  .form-container {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: white;
+    border: red solid 3px;
+    border-radius: 35px;
+  }
+  
+  label {
+    font-family: "Lucida Console", Monaco, monospace;
+  }
+  
+  .burgers {
+    opacity: 1;
+    border: green solid 3px;
+    border-radius: 15px;
+  }
+  
+  .burger-buttons {
+    flex-direction: column;
+  }
+  
+  
+  .delete {
+    background-color: red;
+    margin-top: 0.5rem;
+  }
+  
+  .devoured-button:hover {
+  }
+  
+  .submit-button:hover {
+  }
+  
+  .burger-name {
+  }
+  
+  #footer-text {
+      font-size: 12px;
+      text-align: center;
+      font-family: "Lucida Console", Monaco, monospace;
+      color: green;
+  }
