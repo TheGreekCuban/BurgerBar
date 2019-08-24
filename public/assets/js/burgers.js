@@ -23,7 +23,7 @@ $(function () {
         );
     });
 
-    $(".form-container").on("submit", function (event) {
+    $(".form-inline").on("submit", function (event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
 

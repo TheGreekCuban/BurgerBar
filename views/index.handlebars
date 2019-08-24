@@ -9,7 +9,7 @@
     <form class="form-inline">
       <div class="form-group mb-2">
         <label for="ca" class="sr-only text-center">Type The Name Of The Burger You'd Like To Add</label>
-        <input type="text" class="form-control-plaintext" id="ca" name="burger_name">
+        <input type="text" id="ca" name="burger_name">
       </div>
       <button type="submit" class="btn btn-primary mb-2">Add Burger</button>
     </form>
@@ -18,7 +18,7 @@
   <div class="inner-container">
     <div class="left-container-inner">
       <h2 class="inner-inner-title">Burgers Just Waiting To Be Devoured!</h2>
-      <div>
+      <div id="burger">
         {{#each burgers}}
         {{#unless devoured}}
         {{> blocks/burger-block devoured=true}}
@@ -29,7 +29,7 @@
 
     <div class="right-container-inner">
       <h2 class="inner-inner-title">The Burger Graveyard!</h2>
-      <div>
+      <div id="burger">
         {{#each burgers}}
         {{#if devoured}}
         {{> blocks/burger-block devoured=false}}
