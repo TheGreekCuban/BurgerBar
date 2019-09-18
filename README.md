@@ -12,4 +12,4 @@ It's very simple, just add the name of the burger into the textbox and click sub
 ![](/public/assets/img/add-delete.gif)
 
 ## Demo Video #2: Devouring a burger and putting it back on the menu
-!![](/public/assets/img/remove-add-menu.gif)
+![](/public/assets/img/remove-add-menu.gif)
