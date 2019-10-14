@@ -1,11 +1,12 @@
 //Must first require mysql and save to a variable in order to use it in the connection.
+require("dotenv").config()
 const mysql = require("mysql");
-const dotenv = require("dotenv").config()
+
 
 var connection;
 
-if (process.env.JAWSDB_URL) {
-  connection = mysql.createConnection(process.env.JAWSDB_URL)
+if (process.env.CLEARDB_DATABASE_URL) {
+  connection = mysql.createConnection(process.env.CLEARDB_DATABASE_URL)
 } else {
   connection = mysql.createConnection({
     host: "localhost",
