@@ -14,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TheGreekCuban/burger.git"
+    "url": "git+https://github.com/TheGreekCuban/BurgerBar.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/TheGreekCuban/burger/issues"
+    "url": "https://github.com/TheGreekCuban/BurgerBar/issues"
   },
-  "homepage": "https://github.com/TheGreekCuban/burger#readme",
+  "homepage": "https://github.com/TheGreekCuban/BurgerBarr#readme",
   "dependencies": {
     "config.json": "0.0.4",
     "dotenv": "^8.1.0",
