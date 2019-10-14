@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/TheGreekCuban/BurgerBar/issues"
   },
-  "homepage": "https://github.com/TheGreekCuban/BurgerBarr#readme",
+  "homepage": "https://github.com/TheGreekCuban/BurgerBar#readme",
   "dependencies": {
     "config.json": "0.0.4",
     "dotenv": "^8.1.0",
