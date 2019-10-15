@@ -1,6 +1,6 @@
 # BurgerBar
 
-Link: https://alexander-burgerbar.herokuapp.com/
+Link: https://burgerbar-alexander.herokuapp.com/
 
 This application uses mySQL, Express, Node.js and Handlebars.js on the backend. In addition it strictly adheres to the mvc format and even has a custom ORM with helper functions! On the front end I used a combination of Bootstrap, CSS and jQuery.
 
